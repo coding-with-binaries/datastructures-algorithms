@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TrappingRainwater {
 
-    public static int calculateTrappedWater(int H[]) {
+    private static int calculateTrappedWater(int H[]) {
         int N = H.length;
         int leftMax = H[0];
         int rightMax = H[N - 1];
