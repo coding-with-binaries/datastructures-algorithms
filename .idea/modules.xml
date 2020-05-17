@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dynamic Programming/Dynamic Programming.iml" filepath="$PROJECT_DIR$/Dynamic Programming/Dynamic Programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/interview-prep.iml" filepath="$PROJECT_DIR$/interview-prep.iml" />
     </modules>
