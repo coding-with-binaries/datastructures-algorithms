@@ -102,7 +102,7 @@ public class MinEditDistance {
         System.out.println(String.format("Minimum edit distance of '%s' and '%s' DP: %s", a, b, minEditDistance_DP));
 
         int minEditDistance_Memoize = getMinEditDistance_Memoize(a, b);
-        System.out.println(String.format("Minimum edit distance of '%s' and '%s' Memoized: %s", a, b, minEditDistance_Memoize));
+        System.out.println(String.format("Minimum edit distance of '%s' and '%s' Memoization: %s", a, b, minEditDistance_Memoize));
 
         // This will be very slow so for bigger strings better to comment this out
         int minEditDistance_Recursive = getMinEditDistance_Recursive(a, b);
