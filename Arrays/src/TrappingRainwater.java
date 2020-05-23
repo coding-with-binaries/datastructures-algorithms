@@ -1,3 +1,8 @@
+/*
+ * Author - Varun Sharma
+ * Complexity - O(n)
+ */
+
 import java.util.Scanner;
 
 public class TrappingRainwater {
