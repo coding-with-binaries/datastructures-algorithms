@@ -1,3 +1,10 @@
+/*
+ * Author - Varun Sharma
+ * Time Complexity - O(n*sum) - Pseudo Polynomial Time Complexity
+ * Space Complexity - O(n*sum)
+ */
+
+
 import java.util.Arrays;
 import java.util.Scanner;
 
