@@ -10,7 +10,7 @@ import java.util.Queue;
 
 public class LevelOrderTraversal {
 
-    private static void printLevelOrder(TreeNode root) {
+    public static void printLevelOrder(TreeNode root) {
         Queue<TreeNode> pendingNodes = new LinkedList<>();
         pendingNodes.add(root);
         pendingNodes.add(null);
@@ -33,6 +33,7 @@ public class LevelOrderTraversal {
                 System.out.print(treeNode.data + " ");
             }
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
