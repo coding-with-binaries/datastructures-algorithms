@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SubsetSum {
-    private static boolean isSubsetPresentWithSum_Recursive(int A[], int sum, int start) {
+    private static boolean isSubsetPresentWithSum_Recursive(int[] A, int sum, int start) {
         int len = A.length;
 
         if (sum == 0) {
@@ -31,11 +31,11 @@ public class SubsetSum {
         return case1 || case2;
     }
 
-    private static boolean isSubsetPresentWithSum_Recursive(int A[], int sum) {
+    private static boolean isSubsetPresentWithSum_Recursive(int[] A, int sum) {
         return isSubsetPresentWithSum_Recursive(A, sum, 0);
     }
 
-    private static boolean isSubsetPresentWithSum_Memoize(int A[], int sum, int start, int[][] cache) {
+    private static boolean isSubsetPresentWithSum_Memoize(int[] A, int sum, int start, int[][] cache) {
         if (cache[start][sum] != -1) {
             return cache[start][sum] == 1;
         }
@@ -66,7 +66,7 @@ public class SubsetSum {
         return isPresent;
     }
 
-    private static boolean isSubsetPresentWithSum_Memoize(int A[], int sum) {
+    private static boolean isSubsetPresentWithSum_Memoize(int[] A, int sum) {
         int len = A.length;
         int[][] cache = new int[len + 1][sum + 1];
         for (int i = 0; i <= len; i++) {
@@ -77,7 +77,7 @@ public class SubsetSum {
         return isSubsetPresentWithSum_Memoize(A, sum, 0, cache);
     }
 
-    private static boolean isSubsetPresentWithSum_DP(int A[], int sum) {
+    private static boolean isSubsetPresentWithSum_DP(int[] A, int sum) {
         int len = A.length;
         boolean[][] cache = new boolean[len + 1][sum + 1];
         for (int i = 0; i <= len; i++) {
@@ -106,7 +106,7 @@ public class SubsetSum {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number of items in array");
         int totalItems = scanner.nextInt();
-        int A[] = new int[totalItems];
+        int[] A = new int[totalItems];
         System.out.println("Enter the items in array");
         for (int i = 0; i < totalItems; i++) {
             A[i] = scanner.nextInt();

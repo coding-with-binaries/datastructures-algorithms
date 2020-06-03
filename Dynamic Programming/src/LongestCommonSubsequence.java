@@ -53,7 +53,7 @@ public class LongestCommonSubsequence {
     private static int getLongestCommonSubsequence_Memoize(String a, String b) {
         int lenA = a.length();
         int lenB = b.length();
-        int cache[][] = new int[lenA + 1][lenB + 1];
+        int[][] cache = new int[lenA + 1][lenB + 1];
 
         for (int i = 0; i <= lenA; i++) {
             for (int j = 0; j <= lenB; j++) {
@@ -67,7 +67,7 @@ public class LongestCommonSubsequence {
     private static int getLongestCommonSubsequence_DP(String a, String b) {
         int lenA = a.length();
         int lenB = b.length();
-        int cache[][] = new int[lenA + 1][lenB + 1];
+        int[][] cache = new int[lenA + 1][lenB + 1];
 
         for (int i = 0; i <= lenA; i++) {
             for (int j = 0; j <= lenB; j++) {

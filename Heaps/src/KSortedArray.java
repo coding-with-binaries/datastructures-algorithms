@@ -3,7 +3,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class KSortedArray {
-    private static void sortKSortedArray(int A[], int k) {
+    private static void sortKSortedArray(int[] A, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
         for (int i = 0; i <= k; i++) {

@@ -12,7 +12,7 @@ public class PossibleWaysOfCoinChange {
         }
         int totalCoins = coins.length;
         // Rows corresponds to total coins and columns for amount
-        int possibleWays[][] = new int[totalCoins + 1][amount + 1];
+        int[][] possibleWays = new int[totalCoins + 1][amount + 1];
         // If amount is 0 then it doesn't matter how many coins we have. There is always solution only
         for (int i = 0; i <= totalCoins; i++) {
             possibleWays[i][0] = 1;

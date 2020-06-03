@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class EqualPartitionSet {
-    private static boolean hasEqualPartitionSets(int A[]) {
+    private static boolean hasEqualPartitionSets(int[] A) {
         int len = A.length;
         int sumOfElements = 0;
         for (int i = 0; i < len; i++) {
@@ -19,7 +19,7 @@ public class EqualPartitionSet {
             int sumForEqualPartition = sumOfElements / 2;
             // Now this becomes subset sum problem
             // We have to find any subset with sum as half the total
-            boolean cache[][] = new boolean[len + 1][sumForEqualPartition + 1];
+            boolean[][] cache = new boolean[len + 1][sumForEqualPartition + 1];
             for (int i = 0; i <= len; i++) {
                 for (int j = 0; j <= sumForEqualPartition; j++) {
                     if (i == 0) {
@@ -45,7 +45,7 @@ public class EqualPartitionSet {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number of items in array");
         int totalItems = scanner.nextInt();
-        int A[] = new int[totalItems];
+        int[] A = new int[totalItems];
         System.out.println("Enter the items in array");
         for (int i = 0; i < totalItems; i++) {
             A[i] = scanner.nextInt();

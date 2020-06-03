@@ -38,7 +38,7 @@ public class LongestIncreasingSubsequence {
         System.out.println("Enter number of elements");
         int len = scanner.nextInt();
         System.out.println("Enter elements of the sequence");
-        int A[] = new int[len];
+        int[] A = new int[len];
         for (int i = 0; i < len; i++) {
             A[i] = scanner.nextInt();
         }

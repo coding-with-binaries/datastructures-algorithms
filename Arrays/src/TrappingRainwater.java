@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class TrappingRainwater {
 
-    private static int calculateTrappedWater(int H[]) {
+    private static int calculateTrappedWater(int[] H) {
         int N = H.length;
         int leftMax = H[0];
         int rightMax = H[N - 1];
@@ -42,7 +42,7 @@ public class TrappingRainwater {
         System.out.println("Enter number of buildings");
         int N = scanner.nextInt();
         System.out.println("Enter heights of buildings");
-        int H[] = new int[N];
+        int[] H = new int[N];
         for (int i = 0; i < N; i++) {
             H[i] = scanner.nextInt();
         }

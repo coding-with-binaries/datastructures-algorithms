@@ -8,7 +8,7 @@ import java.util.Stack;
 
 public class MaxRectangleHistogram {
     private static int getMaxRectangleArea(int[] histogram) {
-        int A[] = new int[histogram.length + 2];
+        int[] A = new int[histogram.length + 2];
         System.arraycopy(histogram, 0, A, 1, histogram.length);
         int len = A.length;
         A[0] = A[len - 1] = -1;
@@ -36,7 +36,7 @@ public class MaxRectangleHistogram {
         System.out.println("Enter number of bars in histogram");
         int n = scanner.nextInt();
         System.out.println("Enter heights of bar in histogram");
-        int histogramBars[] = new int[n];
+        int[] histogramBars = new int[n];
         for (int i = 0; i < n; i++) {
             histogramBars[i] = scanner.nextInt();
         }

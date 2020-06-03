@@ -13,11 +13,11 @@ public class MinDifferenceSubset {
         int len = A.length;
 
         int sum = 0;
-        for (int i = 0; i < len; i++) {
-            sum += A[i];
+        for (int value : A) {
+            sum += value;
         }
 
-        boolean cache[][] = new boolean[len + 1][sum + 1];
+        boolean[][] cache = new boolean[len + 1][sum + 1];
 
         for (int i = 0; i <= len; i++) {
             for (int j = 0; j <= sum; j++) {
@@ -50,7 +50,7 @@ public class MinDifferenceSubset {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number of items in array");
         int totalItems = scanner.nextInt();
-        int A[] = new int[totalItems];
+        int[] A = new int[totalItems];
         System.out.println("Enter the items in array");
         for (int i = 0; i < totalItems; i++) {
             A[i] = scanner.nextInt();
