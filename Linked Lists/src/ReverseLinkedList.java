@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ReverseLinkedList {
     private static Node reverseLinkedListRecursively(Node head) {
         if (head == null || head.next == null) {
@@ -31,8 +33,9 @@ public class ReverseLinkedList {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         LinkedList list = new LinkedList();
-        list.inputLinkedList();
+        list.inputLinkedList(scanner);
         System.out.println("Entered linked list is:");
         list.printLinkedList();
         list.head = reverseLinkedListRecursively(list.head);

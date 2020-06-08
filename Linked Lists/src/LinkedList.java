@@ -11,13 +11,14 @@ class Node {
 
 public class LinkedList {
     Node head;
+    private int size = -1;
+    private Node tail;
 
     public LinkedList() {
         this.head = null;
     }
 
-    public void inputLinkedList() {
-        Scanner scanner = new Scanner(System.in);
+    public void inputLinkedList(Scanner scanner) {
         System.out.println("Enter number of elements to add");
         int n = scanner.nextInt();
         if (n > 0) {
@@ -31,8 +32,7 @@ public class LinkedList {
         }
     }
 
-    public void inputCircularLinkedList() {
-        Scanner scanner = new Scanner(System.in);
+    public void inputCircularLinkedList(Scanner scanner) {
         System.out.println("Enter number of elements to add");
         int n = scanner.nextInt();
         if (n > 0) {
@@ -45,6 +45,37 @@ public class LinkedList {
             }
             pointer.next = head;
         }
+    }
+
+    public Node getTail() {
+        if (tail != null) {
+            return this.tail;
+        }
+
+        if (head == null) {
+            return null;
+        }
+
+        Node pointer = head;
+        while (pointer.next != null) {
+            pointer = pointer.next;
+        }
+        tail = pointer;
+        return tail;
+    }
+
+    public int getSize() {
+        if (this.size != -1) {
+            return this.size;
+        }
+        Node pointer = head;
+        int size = 0;
+        while (pointer != null) {
+            size++;
+            pointer = pointer.next;
+        }
+        this.size = size;
+        return this.size;
     }
 
     public void printLinkedList() {
