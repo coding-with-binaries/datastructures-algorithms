@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class IsBinarySearchTree {
 
     private static int getMaximumFromTree(TreeNode root) {
