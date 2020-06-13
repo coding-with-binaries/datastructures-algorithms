@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Linked Lists/Linked Lists.iml" filepath="$PROJECT_DIR$/Linked Lists/Linked Lists.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack And Queues/Stack And Queues.iml" filepath="$PROJECT_DIR$/Stack And Queues/Stack And Queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Threads/Threads.iml" filepath="$PROJECT_DIR$/Threads/Threads.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastructures-algorithms.iml" filepath="$PROJECT_DIR$/datastructures-algorithms.iml" />
     </modules>
   </component>
