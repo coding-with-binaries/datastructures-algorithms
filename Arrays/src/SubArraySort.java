@@ -1,8 +1,8 @@
 /*
+ * Question: Find the minimum length sub-array sorting which makes the array sorted
+ *
  * Author - Varun Sharma
  * Complexity - O(n)
- *
- * Question: Find the minimum length sub-array sorting which makes the array sorted
  */
 
 import java.util.Scanner;

@@ -22,7 +22,7 @@ public class IsBinarySearchTree {
         return Math.min(root.data, Math.min(leftMin, rightMin));
     }
 
-    private static boolean isBinarySearchTree(TreeNode root) {
+    private static boolean isBinarySearchTree_InEfficient(TreeNode root) {
         if (root == null) {
             return true;
         }
@@ -40,7 +40,24 @@ public class IsBinarySearchTree {
             }
         }
 
-        return isBinarySearchTree(root.left) && isBinarySearchTree(root.right);
+        return isBinarySearchTree_InEfficient(root.left) && isBinarySearchTree_InEfficient(root.right);
+    }
+
+    private static boolean isBinarySearchTree(TreeNode root, int min, int max) {
+
+        if (root == null) {
+            return true;
+        }
+
+        if (root.data < min || root.data > max) {
+            return false;
+        }
+
+        return isBinarySearchTree(root.left, min, root.data - 1) && isBinarySearchTree(root.right, root.data + 1, max);
+    }
+
+    private static boolean isBinarySearchTree(TreeNode root) {
+        return isBinarySearchTree(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
     public static void main(String[] args) {
