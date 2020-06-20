@@ -65,6 +65,7 @@ public class KnapsackProblem {
                 } else {
                     // Include the ith weight
                     int case1 = values[i - 1] + cache[i - 1][j - weights[i - 1]];
+                    // Not include the ith weight
                     int case2 = cache[i - 1][j];
                     cache[i][j] = Math.max(case1, case2);
                 }
