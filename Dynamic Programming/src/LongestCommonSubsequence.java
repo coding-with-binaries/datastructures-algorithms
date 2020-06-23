@@ -89,9 +89,9 @@ public class LongestCommonSubsequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first string");
-        String a = scanner.nextLine();
+        String a = scanner.next();
         System.out.println("Enter second string");
-        String b = scanner.nextLine();
+        String b = scanner.next();
 
         int longestCommonSubsequence_DP = getLongestCommonSubsequence_DP(a, b);
         System.out.println(String.format("Longest Common Subsequence of '%s' and '%s' DP: %s", a, b, longestCommonSubsequence_DP));
