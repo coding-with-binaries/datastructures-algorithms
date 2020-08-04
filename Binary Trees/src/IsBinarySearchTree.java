@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class IsBinarySearchTree {
 
     private static int getMaximumFromTree(TreeNode root) {
@@ -61,9 +63,10 @@ public class IsBinarySearchTree {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         BinaryTree binaryTree = new BinaryTree();
         System.out.println("Enter the Binary Tree");
-        binaryTree.inputTree();
+        binaryTree.inputTree(scanner);
 
         boolean isBST = isBinarySearchTree(binaryTree.root);
         System.out.println(String.format("The tree %s a Binary Search Tree", isBST ? "IS" : "IS NOT"));

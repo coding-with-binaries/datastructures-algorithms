@@ -21,9 +21,10 @@ public class SymmetricTree {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         BinaryTree binaryTree = new BinaryTree();
         System.out.println("Enter the tree");
-        binaryTree.inputTree();
+        binaryTree.inputTree(scanner);
         boolean symmetric = isSymmetric(binaryTree.root);
 
         System.out.println(String.format("The entered tree %s symmetric", symmetric ? "IS" : "IS NOT"));

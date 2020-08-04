@@ -5,6 +5,7 @@
  */
 
 
+import java.util.Scanner;
 import java.util.Stack;
 
 public class ZigZagTraversal {
@@ -45,9 +46,10 @@ public class ZigZagTraversal {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
         System.out.println("Input Tree");
-        tree.inputTree();
+        tree.inputTree(scanner);
 
         System.out.println("-----Level Order Traversal----");
         printZigZagOrder(tree.root);

@@ -22,8 +22,7 @@ class TreeNode {
 public class BinaryTree {
     TreeNode root;
 
-    public void inputTree() {
-        Scanner scanner = new Scanner(System.in);
+    public void inputTree(Scanner scanner) {
         System.out.println("Enter root node");
         int rootData = scanner.nextInt();
         root = new TreeNode(rootData);

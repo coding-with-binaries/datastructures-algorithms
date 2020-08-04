@@ -7,6 +7,7 @@
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class LevelOrderTraversal {
 
@@ -37,9 +38,10 @@ public class LevelOrderTraversal {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
         System.out.println("Input Tree");
-        tree.inputTree();
+        tree.inputTree(scanner);
 
         System.out.println("-----Level Order Traversal----");
         printLevelOrder(tree.root);

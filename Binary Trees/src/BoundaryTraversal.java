@@ -4,6 +4,8 @@
  */
 
 
+import java.util.Scanner;
+
 public class BoundaryTraversal {
     private static void printLeftBoundary(TreeNode root) {
         if (root == null) {
@@ -38,9 +40,10 @@ public class BoundaryTraversal {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
         System.out.println("Input Tree");
-        tree.inputTree();
+        tree.inputTree(scanner);
 
         System.out.println("----Boundary Traversal----");
         if (tree.root != null) {
