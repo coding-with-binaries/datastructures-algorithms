@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class AdjacencyMatrixGraph {
     boolean[][] graph;
 
-    public void inputGraph(Scanner scanner) {
+    public void inputAdjacencyMatrix(Scanner scanner) {
         System.out.println("Enter the number of vertices");
         int V = scanner.nextInt();
         graph = new boolean[V][V];
@@ -16,7 +16,7 @@ public class AdjacencyMatrixGraph {
         }
     }
 
-    public void printGraph() {
+    public void printAdjacencyMatrix() {
         int V = graph.length;
         for (int i = 0; i < V; i++) {
             System.out.print(i + " ->");
@@ -32,8 +32,8 @@ public class AdjacencyMatrixGraph {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AdjacencyMatrixGraph adjacencyMatrixGraph = new AdjacencyMatrixGraph();
-        adjacencyMatrixGraph.inputGraph(scanner);
+        adjacencyMatrixGraph.inputAdjacencyMatrix(scanner);
         System.out.println("Entered Graph is:");
-        adjacencyMatrixGraph.printGraph();
+        adjacencyMatrixGraph.printAdjacencyMatrix();
     }
 }
