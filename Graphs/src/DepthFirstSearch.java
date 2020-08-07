@@ -4,10 +4,10 @@ public class DepthFirstSearch {
     private static void printDepthFirstSearch(boolean[][] graph, boolean[] visited, int currentNode) {
         int totalNodes = graph.length;
         boolean[] nodeConnections = graph[currentNode];
+        visited[currentNode] = true;
+        System.out.print(currentNode + " ");
         for (int i = 0; i < totalNodes; i++) {
             if (nodeConnections[i] && !visited[i]) {
-                visited[i] = true;
-                System.out.print(i + " ");
                 printDepthFirstSearch(graph, visited, i);
             }
         }
