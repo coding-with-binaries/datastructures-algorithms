@@ -22,14 +22,15 @@ public class BreadthFirstSearch {
         }
     }
 
-    private static void printBreadthFirstSearch(boolean[][] graph) {
+    private static void printBreadthFirstSearch(boolean[][] graph, int startNode) {
         int totalNodes = graph.length;
 
         boolean[] visited = new boolean[totalNodes];
 
         for (int i = 0; i < totalNodes; i++) {
-            if (!visited[i]) {
-                printBreadthFirstSearch(graph, visited, i);
+            int currentNode = startNode + i < totalNodes ? startNode + i : startNode + i - totalNodes;
+            if (!visited[currentNode]) {
+                printBreadthFirstSearch(graph, visited, currentNode);
                 System.out.println();
             }
         }
@@ -41,7 +42,9 @@ public class BreadthFirstSearch {
         adjacencyMatrix.inputAdjacencyMatrix(scanner);
         System.out.println("Adjacency Matrix is:");
         adjacencyMatrix.printAdjacencyMatrix();
+        System.out.println("Enter start node");
+        int startNode = scanner.nextInt();
         System.out.println("Breadth First Search Traversal is:");
-        printBreadthFirstSearch(adjacencyMatrix.graph);
+        printBreadthFirstSearch(adjacencyMatrix.graph, startNode);
     }
 }

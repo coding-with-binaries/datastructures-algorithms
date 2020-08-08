@@ -13,14 +13,15 @@ public class DepthFirstSearch {
         }
     }
 
-    private static void printDepthFirstSearch(boolean[][] graph) {
+    private static void printDepthFirstSearch(boolean[][] graph, int startNode) {
         int totalNodes = graph.length;
 
         boolean[] visited = new boolean[totalNodes];
 
         for (int i = 0; i < totalNodes; i++) {
-            if (!visited[i]) {
-                printDepthFirstSearch(graph, visited, i);
+            int currentNode = startNode + i < totalNodes ? startNode + i : startNode + i - totalNodes;
+            if (!visited[currentNode]) {
+                printDepthFirstSearch(graph, visited, currentNode);
                 System.out.println();
             }
         }
@@ -32,7 +33,9 @@ public class DepthFirstSearch {
         adjacencyMatrix.inputAdjacencyMatrix(scanner);
         System.out.println("Adjacency Matrix is:");
         adjacencyMatrix.printAdjacencyMatrix();
+        System.out.println("Enter start node");
+        int startNode = scanner.nextInt();
         System.out.println("Depth First Search Traversal is:");
-        printDepthFirstSearch(adjacencyMatrix.graph);
+        printDepthFirstSearch(adjacencyMatrix.graph, startNode);
     }
 }
