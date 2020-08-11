@@ -31,17 +31,15 @@ public class DepthFirstSearch {
     private static void printDepthFirstSearch(LinkedList<Integer>[] graph, boolean[] visited, int currentNode) {
         LinkedList<Integer> nodeConnections = graph[currentNode];
         visited[currentNode] = true;
-        int totalConnections = nodeConnections.size();
         System.out.print(currentNode + " ");
-        for(int i=0;i<totalConnections;i++){
-            int current = nodeConnections.get(i);
-            if(!visited[current]){
-                printDepthFirstSearch(graph,visited,current);
+        for (int next : nodeConnections) {
+            if (!visited[next]) {
+                printDepthFirstSearch(graph, visited, next);
             }
         }
     }
 
-    private static void printDepthFirstSearch(LinkedList<Integer>[] graph, int startNode){
+    private static void printDepthFirstSearch(LinkedList<Integer>[] graph, int startNode) {
         int totalNodes = graph.length;
 
         boolean[] visited = new boolean[totalNodes];
@@ -81,7 +79,7 @@ public class DepthFirstSearch {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the DS to use\n1 - AdjacencyList\n2 - Adjacency Matrix");
         int choice = scanner.nextInt();
-        switch (choice){
+        switch (choice) {
             case 1:
                 depthFirstSearchUsingAdjacencyList(scanner);
                 break;
