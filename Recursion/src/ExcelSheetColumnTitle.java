@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExcelSheetColumn {
+public class ExcelSheetColumnTitle {
     private static String getLastCharacterOfColumn(int remainder) {
         char lastChar = remainder == 0 ? 'Z' : (char) (remainder + 64);
         return String.valueOf(lastChar);
