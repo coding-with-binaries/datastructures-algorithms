@@ -23,6 +23,6 @@ public class ExcelSheetColumnNumber {
         System.out.println("Enter the column number");
         String columnTitle = scanner.nextLine();
         int column = getColumnNumber(columnTitle);
-        System.out.println("Column number is: " + columnTitle);
+        System.out.println("Column number is: " + column);
     }
 }
